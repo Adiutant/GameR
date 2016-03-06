@@ -6,30 +6,37 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Media;
+using System.Runtime.InteropServices;
+using WMPLib;
 
 namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
+        internal WindowsMediaPlayer WMP;
         public Form1()
         {
             InitializeComponent();
         }
         int classcode;
-        Character paladin1= new Paladin(800,70,80);
-        Character paladin2= new Paladin(800,70,80);
+        Character paladin1 = new Paladin(800, 70, 80);
+        Character paladin2 = new Paladin(800, 70, 80);
         Character priest1 = new Priest(300, 100, 30);
         Character priest2 = new Priest(300, 100, 30);
         Character rogue1 = new Rogue(350, 90, 90);
-        Character rogue2=new Rogue(350, 90, 90);
-        Character shaman1=new Shaman(400, 100,50);
+        Character rogue2 = new Rogue(350, 90, 90);
+        Character shaman1 = new Shaman(400, 100, 50);
         Character shaman2 = new Shaman(400, 100, 50);
 
         private void Form1_Load(object sender, EventArgs e)
         {
             Skill1.Text = ("AutoAtack");
-           
-         
+            WMP = new WindowsMediaPlayer();
+            WMP.settings.volume = 100;
+            WMP.URL = "C:\\Game\\Resources\\Hearthstone_-_Main_Title_(iPlayer.fm).mp3";
+            WMP.controls.play();
+
         }
         public int Chose;
 
@@ -84,7 +91,7 @@ namespace WindowsFormsApplication1
                 }
             }
         }
-    
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -154,10 +161,10 @@ namespace WindowsFormsApplication1
             }
             if (paladin1.Hp <= 0 & priest1.Hp <= 0 & rogue1.Hp <= 0 & shaman1.Hp <= 0)
             {
-         
+
                 timer1.Stop();
                 MessageBox.Show("You loose");
-         
+
                 this.Close();
 
             }
@@ -165,7 +172,7 @@ namespace WindowsFormsApplication1
             {
                 timer1.Stop();
                 MessageBox.Show("You Win");
-              
+
                 this.Close();
 
             }
@@ -333,69 +340,69 @@ namespace WindowsFormsApplication1
         }
         Random r2 = new Random();
         //Bots
-     
-        
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int botclasscode = r2.Next(1,5);
+            int botclasscode = r2.Next(1, 5);
             if (turn == 0)
             {
-             switch (botclasscode)
-             {
+                switch (botclasscode)
+                {
 
-                 case 1:
-                       
-                       
-                       
-                      
-                            paladin1.Hp -= paladin2.dmg;
-                        
-          
+                    case 1:
+
+
+
+
+                        paladin1.Hp -= paladin2.dmg;
+
+
                         turn = 1;
-                    break;
+                        break;
 
                     case 2:
 
 
 
-                         
-                            
-                                priest1.Hp -= priest2.dmg;
-                           
-                            
-                            turn = 1;
+
+
+                        priest1.Hp -= priest2.dmg;
+
+
+                        turn = 1;
 
                         break;
 
                     case 3:
 
 
-                              
-                           
-                                    shaman1.Hp -= shaman2.dmg;
-                                
-                               
-                                
-                                
-                                turn = 1;
-                            break;
+
+
+                        shaman1.Hp -= shaman2.dmg;
+
+
+
+
+                        turn = 1;
+                        break;
                     case 4:
 
 
-                                   
-                                        rogue1.Hp -= rogue2.dmg;
-                                  
-                                    turn = 1;
-                                break;
-                                }
-                            }
-                        }
-        
+
+                        rogue1.Hp -= rogue2.dmg;
+
+                        turn = 1;
+                        break;
+                }
+            }
+        }
+
 
         private void button9_Click(object sender, EventArgs e)
         {
-            
+
             switch (classcode)
             {
                 case 1:
@@ -518,16 +525,16 @@ namespace WindowsFormsApplication1
             Skill2.Text = ("CritikalStrike");
             Mp.Value = rogue1.mp;
         }
-        
+
 
     }
 }
-            
-        
-    
 
 
 
 
-            
+
+
+
+
 
