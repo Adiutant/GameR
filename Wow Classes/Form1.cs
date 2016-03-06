@@ -477,6 +477,10 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            paladin1.target = null;
+            priest1.target = null;
+            rogue1.target = null;
+            shaman1.target = null;
             classcode = 1;
             Skill2.Text = ("Holystrike");
             Mp.Value = paladin1.mp;
@@ -484,6 +488,10 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            paladin1.target = null;
+            priest1.target = null;
+            rogue1.target = null;
+            shaman1.target = null;
             classcode = 2;
             Skill2.Text = ("Lightheal");
             Mp.Value = priest1.mp;
@@ -491,6 +499,10 @@ namespace WindowsFormsApplication1
 
         private void button4_Click(object sender, EventArgs e)
         {
+            paladin1.target = null;
+            priest1.target = null;
+            rogue1.target = null;
+            shaman1.target = null;
             classcode = 3;
             Skill2.Text = ("ElementStorm");
             Mp.Value = shaman1.mp;
@@ -498,6 +510,10 @@ namespace WindowsFormsApplication1
 
         private void button5_Click(object sender, EventArgs e)
         {
+            paladin1.target = null;
+            priest1.target = null;
+            rogue1.target = null;
+            shaman1.target = null;
             classcode = 4;
             Skill2.Text = ("CritikalStrike");
             Mp.Value = rogue1.mp;
