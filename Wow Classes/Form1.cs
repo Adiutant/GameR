@@ -36,7 +36,7 @@ namespace WindowsFormsApplication1
             WMP.settings.volume = 100;
             WMP.URL = "C:\\Game\\Resources\\Hearthstone_-_Main_Title_(iPlayer.fm).mp3";
             WMP.controls.play();
-
+        
         }
         public int Chose;
 
@@ -525,6 +525,8 @@ namespace WindowsFormsApplication1
             Skill2.Text = ("CritikalStrike");
             Mp.Value = rogue1.mp;
         }
+
+   
 
 
     }

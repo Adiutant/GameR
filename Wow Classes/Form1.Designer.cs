@@ -52,6 +52,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Mp = new System.Windows.Forms.ProgressBar();
             this.label9 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Skill1
@@ -265,11 +266,22 @@
             this.label9.TabIndex = 40;
             this.label9.Text = "Mp";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(403, 267);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(50, 17);
+            this.checkBox1.TabIndex = 41;
+            this.checkBox1.Text = "Mute";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 352);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Mp);
             this.Controls.Add(this.button6);
@@ -324,6 +336,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ProgressBar Mp;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox checkBox1;
 
     }
 }
