@@ -11,7 +11,25 @@ namespace WindowsFormsApplication1
 {
   public  class Character: Button
     {
-      public int hp;
+      private int hp;
+      public int Hp
+      {
+          get { return hp; }
+          set
+          {
+            if (value < 0)   
+            {
+              hp = 0;
+       
+            }
+            else
+            {
+                hp = value;
+
+            }
+          }
+      
+          }
       public int dmg;
       public int mp;
       public Character target;

@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1
     {
           public Paladin(int hp, int mp, int dmg)
         {
-            this.hp = hp;
+            this.Hp = hp;
             this.mp = mp;
             this.dmg = dmg;
 

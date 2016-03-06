@@ -88,71 +88,71 @@ namespace WindowsFormsApplication1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label1.Text = paladin2.hp.ToString();
-            label2.Text = priest2.hp.ToString();
-            label3.Text = rogue2.hp.ToString();
-            label4.Text = shaman2.hp.ToString();
-            label8.Text = paladin1.hp.ToString();
-            label7.Text = priest1.hp.ToString();
-            label6.Text = rogue1.hp.ToString();
-            label5.Text = shaman1.hp.ToString();
+            label1.Text = paladin2.Hp.ToString();
+            label2.Text = priest2.Hp.ToString();
+            label3.Text = rogue2.Hp.ToString();
+            label4.Text = shaman2.Hp.ToString();
+            label8.Text = paladin1.Hp.ToString();
+            label7.Text = priest1.Hp.ToString();
+            label6.Text = rogue1.Hp.ToString();
+            label5.Text = shaman1.Hp.ToString();
 
-            if (paladin2.hp <= 0)
+            if (paladin2.Hp <= 0)
             {
                 button9.Visible = false;
                 button9.Enabled = false;
                 label1.Visible = false;
             }
 
-            if (priest2.hp <= 0)
+            if (priest2.Hp <= 0)
             {
                 button8.Visible = false;
                 button8.Enabled = false;
                 label2.Visible = false;
             }
 
-            if (rogue2.hp <= 0)
+            if (rogue2.Hp <= 0)
             {
                 button7.Visible = false;
                 button7.Enabled = false;
                 label3.Visible = false;
             }
 
-            if (shaman2.hp <= 0)
+            if (shaman2.Hp <= 0)
             {
                 button6.Visible = false;
                 button6.Enabled = false;
                 label4.Visible = false;
             }
 
-            if (paladin1.hp <= 0)
+            if (paladin1.Hp <= 0)
             {
                 button2.Visible = false;
                 button2.Enabled = false;
                 label5.Visible = false;
             }
 
-            if (priest1.hp <= 0)
+            if (priest1.Hp <= 0)
             {
                 button3.Visible = false;
                 button3.Enabled = false;
                 label6.Visible = false;
             }
 
-            if (rogue1.hp <= 0)
+            if (rogue1.Hp <= 0)
             {
                 button4.Visible = false;
                 button4.Enabled = false;
                 label7.Visible = false;
             }
 
-            if (shaman1.hp <= 0)
+            if (shaman1.Hp <= 0)
             {
                 button5.Visible = false;
                 button5.Enabled = false;
                 label8.Visible = false;
             }
-            if (paladin1.hp <= 0 & priest1.hp <= 0 & rogue1.hp <= 0 & shaman1.hp <= 0)
+            if (paladin1.Hp <= 0 & priest1.Hp <= 0 & rogue1.Hp <= 0 & shaman1.Hp <= 0)
             {
          
                 timer1.Stop();
@@ -161,7 +161,7 @@ namespace WindowsFormsApplication1
                 this.Close();
 
             }
-            if (paladin2.hp <= 0 & priest2.hp <= 0 & rogue2.hp <= 0 & shaman2.hp <= 0)
+            if (paladin2.Hp <= 0 & priest2.Hp <= 0 & rogue2.Hp <= 0 & shaman2.Hp <= 0)
             {
                 timer1.Stop();
                 MessageBox.Show("You Win");
@@ -349,7 +349,7 @@ namespace WindowsFormsApplication1
                        
                        
                       
-                            paladin1.hp -= paladin2.dmg;
+                            paladin1.Hp -= paladin2.dmg;
                         
           
                         turn = 1;
@@ -361,7 +361,7 @@ namespace WindowsFormsApplication1
 
                          
                             
-                                priest1.hp -= priest2.dmg;
+                                priest1.Hp -= priest2.dmg;
                            
                             
                             turn = 1;
@@ -373,7 +373,7 @@ namespace WindowsFormsApplication1
 
                               
                            
-                                    shaman1.hp -= shaman2.dmg;
+                                    shaman1.Hp -= shaman2.dmg;
                                 
                                
                                 
@@ -384,7 +384,7 @@ namespace WindowsFormsApplication1
 
 
                                    
-                                        rogue1.hp -= rogue2.dmg;
+                                        rogue1.Hp -= rogue2.dmg;
                                   
                                     turn = 1;
                                 break;
