@@ -17,6 +17,7 @@ namespace WindowsFormsApplication1
       public Character target;
       public void Attack()
       {
+          
           target.hp -= dmg;
       }
     }
