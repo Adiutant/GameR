@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
       public int hp;
       public int dmg;
       public int mp;
-      public string target="null";
+      public Character target;
       public void Attack()
       {
           

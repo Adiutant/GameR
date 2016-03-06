@@ -34,56 +34,57 @@ namespace WindowsFormsApplication1
         public int Chose;
 
         public int target;
-  
-      
 
-    
-      
 
- 
+
+
+
+
+
 
         private void Skill1_Click(object sender, EventArgs e)
         {
-            if(paladin1.target!="null"&&priest1.target!="null"&&rogue1.target!="null"&&shaman1.target!="null")
-            { 
-            switch (classcode)
+            if (paladin1.target != null || priest1.target != null || rogue1.target != null || shaman1.target != null)
             {
-                case 1:
-                    paladin1.Attack();
-                    turn = 0;
-                    if (Mp.Value > 0)
-                    {
-                        Mp.Value -= 5;
-                    }
+                switch (classcode)
+                {
+                    case 1:
+                        paladin1.Attack();
+                        turn = 0;
+                        if (Mp.Value > 0)
+                        {
+                            Mp.Value -= 5;
+                        }
 
-                    break;
-                case 2:
-                    priest1.Attack();
-                    turn = 0;
-                    if (Mp.Value > 0)
-                    {
-                        Mp.Value -= 5;
-                    }
-                    break;
-                case 3:
-                    turn = 0;
-                    rogue1.Attack();
-                    if (Mp.Value > 0)
-                    {
-                        Mp.Value -= 5;
-                    }
-                    break;
-                case 4:
-                    shaman1.Attack();
-                    if (Mp.Value > 0)
-                    {
-                        Mp.Value -= 5;
-                    }
-                    turn = 0;
-                    break;
+                        break;
+                    case 2:
+                        priest1.Attack();
+                        turn = 0;
+                        if (Mp.Value > 0)
+                        {
+                            Mp.Value -= 5;
+                        }
+                        break;
+                    case 3:
+                        turn = 0;
+                        rogue1.Attack();
+                        if (Mp.Value > 0)
+                        {
+                            Mp.Value -= 5;
+                        }
+                        break;
+                    case 4:
+                        shaman1.Attack();
+                        if (Mp.Value > 0)
+                        {
+                            Mp.Value -= 5;
+                        }
+                        turn = 0;
+                        break;
+                }
             }
         }
-    }
+    
 
         private void timer1_Tick(object sender, EventArgs e)
         {
