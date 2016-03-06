@@ -44,8 +44,8 @@ namespace WindowsFormsApplication1
 
         private void Skill1_Click(object sender, EventArgs e)
         {
-            if(paladin1.target!=null&&priest1.target!=null&&rogue1.target!=null&&shaman1.target!=null)
-            { }
+            if(paladin1.target!="null"&&priest1.target!="null"&&rogue1.target!="null"&&shaman1.target!="null")
+            { 
             switch (classcode)
             {
                 case 1:
